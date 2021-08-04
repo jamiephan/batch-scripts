@@ -1,0 +1,1 @@
+node -e "var fs=require(`fs`);if(2==process.argv.length){filedata=fs.readFileSync(process.argv[1],{encoding:`utf8`});let e=[];filedata.split(`\n`).forEach(r=>{r=r.replace(/\r/g,``),e.includes(r)||e.push(r)}),e.sort(),fs.writeFileSync(require(`path`).dirname(process.argv[1])+`/out_${require('path').basename(process.argv[1])}`,e.join(`\n`),{encoding:`utf8`})}" -- %*
